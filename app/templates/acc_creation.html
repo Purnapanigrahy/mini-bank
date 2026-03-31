@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form-card">
+
+<h1>Create Account</h1>
+
+<form method="POST">
+{% csrf_token %}
+
+{% for i in form %}
+
+<div class="form-group">
+<label>{{i.label}}</label>
+{{i}}
+</div>
+
+{% endfor %}
+
+<button class="btn">Submit</button>
+
+</form>
+
+</div>
+
+{% endblock %}

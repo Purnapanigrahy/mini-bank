@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form-card">
+
+<h1>PIN Generation</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="form-group">
+<input type="number" name="acc_number" placeholder="Enter Account Number">
+</div>
+
+<div class="form-group">
+<input type="email" name="email" placeholder="Enter Your Email">
+</div>
+
+<button class="btn">Send OTP</button>
+
+</form>
+
+</div>
+
+{% endblock %}

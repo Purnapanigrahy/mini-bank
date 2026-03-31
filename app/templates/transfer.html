@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form-card">
+
+<h1>Transfer Money</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="form-group">
+<input type="text" placeholder="Account Number" name="acc_number">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Target Account Number" name="t_acc_number">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="PIN" name="pin">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Amount" name="amount">
+</div>
+
+<button class="btn">Transfer</button>
+
+</form>
+
+</div>
+
+{% endblock %}

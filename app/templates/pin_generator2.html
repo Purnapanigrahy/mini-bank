@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form-card">
+
+<h1>Verify OTP & Set PIN</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="form-group">
+<input type="number" name="otp" placeholder="Enter OTP">
+</div>
+
+<div class="form-group">
+<input type="number" name="pin" placeholder="Enter PIN">
+</div>
+
+<div class="form-group">
+<input type="number" name="c_pin" placeholder="Confirm PIN">
+</div>
+
+<button class="btn">Submit</button>
+
+</form>
+
+</div>
+
+{% endblock %}

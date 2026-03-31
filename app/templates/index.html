@@ -1,0 +1,60 @@
+
+
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1 class="title">Mini Bank Dashboard</h1>
+
+    <div class="cards">
+
+        <a href="{% url 'acc_creation' %}" class="card">
+            <div class="icon">🏦</div>
+            <h2>Create Account</h2>
+            <p>Open a new bank account</p>
+            <button>Open</button>
+        </a>
+
+        <a href="{% url 'pin_generation' %}" class="card">
+            <div class="icon">🔐</div>
+            <h2>OTP / Set PIN</h2>
+            <p>Generate OTP and set PIN</p>
+            <button>Open</button>
+        </a>
+
+        <a href="{% url 'deposit' %}" class="card">
+            <div class="icon">💰</div>
+            <h2>Deposit</h2>
+            <p>Add money to account</p>
+            <button>Open</button>
+        </a>
+
+        <a href="{% url 'withdraw' %}" class="card">
+            <div class="icon">💸</div>
+            <h2>Withdraw</h2>
+            <p>Withdraw money</p>
+            <button>Open</button>
+        </a>
+
+        <a href="{% url 'transfer' %}" class="card">
+            <div class="icon">🔁</div>
+            <h2>Transfer</h2>
+            <p>Send money to another account</p>
+            <button>Open</button>
+        </a>
+
+        <a href="{% url 'check_balance' %}" class="card">
+            <div class="icon">📊</div>
+            <h2>Check Balance</h2>
+            <p>View your account balance</p>
+            <button>Open</button>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
